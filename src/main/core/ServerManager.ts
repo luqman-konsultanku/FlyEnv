@@ -102,8 +102,7 @@ export default class ServerManager {
    */
   updateGlobalConfig() {
     global.Server.ForceStart = this.configManager.getConfig('setup.forceStart')
-    global.Server.Licenses = this.configManager.getConfig('setup.license')
-    global.Server.UserUUID = this.configManager.getConfig('setup.user_uuid')
+    // ponytail: license state removed - always unlocked
     global.Server.WindowsElevationMethod = resolveWindowsElevationMethod(
       this.configManager.getConfig('setup.windowsElevationMethod')
     )
